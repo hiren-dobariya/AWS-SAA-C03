@@ -132,3 +132,34 @@
   <li>Max IOPS 256000 with IOPS:GB ratio of 1000:1</li>
   <li>EBS support multi attached</li>
 </ul>
+
+<strong>HDD:</strong>
+<ul>
+  <li>Can not be use as root volume</li>
+  <li>125 GB to 16TB</li>
+  <li><strong>Throughput optimize HDD (st1):</strong> Use for Bigdata, Data warehouses, log processing</li>
+  <li> Max IOPS 500, max throughout 500MB</li>
+  <li><strong>Cold HDD (sc1):</strong> Use for data infrequently accessed</li>
+  <li>Max IOPS 250 and max throughout 250 MB</li>
+</ul>
+
+<h3>EBS Multi-Attached - io1/io2 family </h3>
+<ul>
+  <li>Attached the same EBS volume to multiple EC2 instance within same AZ</li>
+  <li>Use case : Achieve higher application availability in clustered Linux application</li>
+  <li>Application must manage concurrent write operation</li>
+  <li>Volume can attached max 16 instance at a time</li>
+  <li>Must use a file system that clusterd aware </li>
+</ul>
+
+<h3>Amazon EFS - Elastic File System</h3>
+<ul>
+  <li>Managed Network File System(NFS) that can be mount on EC2</li>
+  <li>EFS work with EC2 instance in <strong>multi AZ</strong></li>
+  <li>highly available, scalalble , expensive (3x to gp2), pay per use </li>
+  <li>Use Case : content management, web service, data sharing, worldpress</li>
+  <li>protocol : NFSv4</li>
+  <li> uses security group to access to EFS</li>
+  <li> Compatible with Linux base AMI (Not Window)</li>
+  <li>POSIX standard Linux file system</li>
+</ul>
