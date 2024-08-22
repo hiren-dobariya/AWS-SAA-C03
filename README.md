@@ -32,3 +32,11 @@
 </ul>
 <p>ENIs can be created independently and dynamically attached to EC2 instances, facilitating seamless failover. For example, an F5 load balancer bound to a private IP address can failover by moving its ENI from one instance to another, ensuring high availability. Note that ENIs are specific to the Availability Zone in which they are created.</p>
 
+<a href="https://aws.amazon.com/blogs/aws/new-elastic-network-interfaces-in-the-virtual-private-cloud/">
+  <img src="https://github.com/user-attachments/assets/b1249bd5-0c22-4fc7-bdc2-e49c4c1d2549" alt="Elastic Network Interfaces in the Virtual Private Cloud">
+</a>
+
+
+
+
+
