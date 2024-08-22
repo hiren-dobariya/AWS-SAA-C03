@@ -80,6 +80,55 @@
 <p><strong>Fast Snapshot Restore(FSR)</strong>: Forceful initialization of snapshot to have no latency. This comes with cost</p>
 <p>Volume can create from Snapshot</p>
 
+<h3>AMI (Amazon Machine Image) Overview</h3>
+<p>AMI are customization of an EC2 instance</p>
+<ul>
+  <li>You add your own software, configuration, operating system, monitoring</li>
+  <li>faster boot/configuration time becase all software are pre-package</li>
+  <li>AMI build for specific region but copy across the regions</li>
+</ul>
+<p>EC2 instances launch from : </p>
+<ul>
+  <li> Public AMI : AWS provide</li>
+  <li>Own AMI : create your own and maintain</li>
+  <li>AWS Marketplace AMI : Created by someone else and sell </li>
+</ul>
 
+<h3>EC2 Instance Store</h3>
+<ul>
+  <li>EBS volume store are network drives with good but limited performance</li>
+  <li>For high performance hardware disk, use EC2 Instance Store</li>
+  <li>Better I/O operation</li>
+  <li>EC2 Instance Store loss storage if they're stopped </li>
+  <li>Good for Cache, buffer, temporary data, scratch data</li>
+  <li>Risk of data loss if hardware fails</li>
+</ul>
 
+<h3>EBS Volume Types</h3>
+<ul>
+  <li> <strong>gp2/gp3 (SSD):</strong> General purpose SSD volume that balance price and personal for wide variety of workload  </li>
+   <li> <strong>io1/io2 Block Express(SSD):</strong> High performance SSD volume for mission critical low latency or high-throughout workload  </li>
+  <li> <strong>st1 (HDD):</strong> Low cost HDD volume design for frequently accessed, throughput intestive workloads </li>
+  <li> <strong>sc1 (HDD):</strong> Low cost HDD volune design for less frequently accessed workloads </li>
+  <li> Only gp2/gp3 and io1/io2 Block Express can be used as bool volumes</li>
+</ul>
 
+<p>EBS Volume type use cases :</p>
+<strong>General purpose SSD:</strong>
+<ul>
+  <li>System boot volume, Virtual desktop, development and test environment. </li>
+  <li>Range : 1 GB to 16TB</li>
+  <li><strong>gp3 :</strong> Baseline 3000 IOPS and thoroughtput 125 MB. Can be increase to 16000 IOPS and 1000 MB independently</li>
+  <li><strong>gp2 :</strong> Small GP2 volume burst to 3000 IOPS. Size of volume and IOPS linked, max IOPS 16000. 3 IOPS per GB so 5334 GB, max IO  reache </li>
+</ul>
+<strong>Provisioned IOPS (PIOPS) SSD:</strong>
+<ul>
+  <li>Critical business application with sustained IOPS performance</li>
+  <li>OR application need more than 16000 IOPS</li>
+  <li>Great for Database workload</li>
+  <li><strong>io1 (4GB-16TB): </strong>Max IOPS 64000 for Nitro EC2 instance and 32000 for others</li>
+  <li>Can increase PIOPS independently from storage size</li>
+  <li><strong>io2 Block Express (4GB-64TB):</strong> Sub millisecond latency </li>
+  <li>Max IOPS 256000 with IOPS:GB ratio of 1000:1</li>
+  <li>EBS support multi attached</li>
+</ul>
