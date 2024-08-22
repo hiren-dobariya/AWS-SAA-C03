@@ -36,6 +36,19 @@
   <img src="https://github.com/user-attachments/assets/b1249bd5-0c22-4fc7-bdc2-e49c4c1d2549" alt="Elastic Network Interfaces in the Virtual Private Cloud">
 </a>
 
+<h3>Advantage of ENI</h3>
+
+<strong>Management Network / Backnet</strong>
+<p>You can set up your web, application, and database servers in a dual-network setup. The first network interface (ENI) of the instance connects to a public subnet and sends all traffic (0.0.0.0/0) to the Internet Gateway of the VPC. The second ENI connects to a private subnet, sending all traffic to your VPN Gateway connected to your company's network. This private network is used for tasks like SSH access, management, and logging. You can apply different security groups to each ENI, allowing port 80 traffic through the public ENI and port 22 traffic through the private ENI.</p>
+
+<strong>Multi-Interface Applications</strong>
+<p>You can use an EC2 instance to host load balancers, proxy servers, and NAT servers, forwarding traffic between subnets. In this case, you would disable the Source/Destination Check Flag to let the instance handle traffic that isn’t directly addressed to it. Vendors of networking and security products are expected to build AMIs that support this dual-ENI setup.</p>
+
+<strong>MAC-Based Licensing</strong>
+<p>If you're using software that is licensed to a specific MAC address, you can tie it to the MAC address of an ENI. If you need to switch instances or change instance types later, you can attach the same ENI (and its MAC address) to a new instance to maintain the license.</p>
+
+<strong>Low-Cost High Availability</strong>
+<p>To achieve high availability on a budget, you can attach an ENI to an instance. If the instance fails, you can launch a new one and attach the same ENI to it. This will restore traffic flow within a few seconds.</p>
 
 
 
