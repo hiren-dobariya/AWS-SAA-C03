@@ -50,6 +50,12 @@
 <strong>Low-Cost High Availability</strong>
 <p>To achieve high availability on a budget, you can attach an ENI to an instance. If the instance fails, you can launch a new one and attach the same ENI to it. This will restore traffic flow within a few seconds.</p>
 
+<h3>EC2 Hibernate</h3>
 
-
+<p>Support all instance families</p>
+<p>Instance RAM size must be less than 150GB</p>
+<p>Bare Metal Instance type not supported</p>
+<p>Root volume must EBS, encrypted, not instance store and large</p>
+<p>Available for On-Demanad, Sport and Reserve instances</p>
+<p>Instance can not be hibernated more than 60 days</p>
 
