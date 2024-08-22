@@ -59,3 +59,16 @@
 <p>Available for On-Demanad, Sport and Reserve instances</p>
 <p>Instance can not be hibernated more than 60 days</p>
 
+<h3>EBS(Elastic Block Store) Volume </h3>
+<p>EBS volume is network drive, you can attached to your instance while they run</p>
+<p>It allows you to persist data even after restart/termination </p>
+<p>It can be monunted to once instance at a time. Once instance can have multiple EBS volumes</p>
+<p>They are bound to specific AZ </p>
+<p><strong>Free tier</strong> : free 30 GB SSD</p>
+<p>Communicate between Instance and EBS volume use network which means a bit of letancy</p>
+<p>EBS Volume easyly attached and detached once EC2 instance to another EC2 instance. To move a volume across, first need to snapshot it</p>
+<p>EBS Volume performance depend on size of GB and IOPS</p>
+<p>Root EBS volume is deleted on instance termniate</p>
+
+
+
