@@ -70,5 +70,16 @@
 <p>EBS Volume performance depend on size of GB and IOPS</p>
 <p>Root EBS volume is deleted on instance termniate</p>
 
+<h3>EBS Snapshots</h3>
+<p>Make a backup = snapshot of your volume at point in time</p>
+<p>Can copy snapshot across the AZ or region</p>
+<p>EBS snapshot can archive, "archive tier" 75% cheaper </p>
+<p>Restoring archive takes 24 to 72 hours</p>
+<p>set up rules to retain recycled snapshot so accidental deleted snapshot can recover</p>
+<p>retention period is 1 day to 1 year </p>
+<p><strong>Fast Snapshot Restore(FSR)</strong>: Forceful initialization of snapshot to have no latency. This comes with cost</p>
+<p>Volume can create from Snapshot</p>
+
+
 
 
