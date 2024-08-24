@@ -163,3 +163,45 @@
   <li> Compatible with Linux base AMI (Not Window)</li>
   <li>POSIX standard Linux file system</li>
 </ul>
+
+<h3>Load Balancer</h3>
+<ul>
+  <li>Load Balancer are servers that forward traffic to multiple server</li>
+  <li>expose single point of access (DNS) to your application</li>
+  <li>simelessly handle failure of downstream instances</li>
+  <li>Do regular health check of your instances</li>
+  <li>Provide SSL termination(HTTPS) to your website </li>
+  <li>Enforce stickeness with cookies </li>
+  <li>High available across zones</li>
+  <li>Seperate public traffic with private traffic</li>
+  
+</ul>
+<strong>Why Elastic Load Balancer (ELB)</strong>
+<ul>
+  <li>Elatic Load Balancer is <strong>managed load balancer</strong></li>
+  <li>AWS guarantee that it will be working</li>
+  <li>AWS takes care of upgrade, maintenance, high availability </li>
+  <li>AWS provide few confirmations knobs</li>
+  <li>It costs less to set up your own load balancer but it will be lot more effort on your end</li>
+  <li>It is integrated with many AWS services EC2, EC2 auto scaling group, Route 53, AWS WAF etc</li>
+</ul>
+
+<h3>Types of Load Balancer</h3>
+<ul>
+  <li><strong>Classic Load Balancer</strong>: HTTP, HTTPS, TCP and SSL (secure TCP), deprecated, 2009</li>
+  <li><strong>Application Load Balancer:</strong> HTTP, HTTPS, WebSocket, 2016</li>
+  <li><strong>Network Load Balancer:</strong>TCP, TLS(Secure TCP), UDP, 2017 </li>
+  <li><strong>Gateway Load Balancer:</strong>Operated at layer 3(Network Layer), 2020</li>
+</ul>
+
+<h3>Application Load Balancer</h3>
+<ul>
+  <li>Application Load Balancer is Layer 7 (HTTP)</li>
+  <li>Using Target group, Load Balancing to multiple HTTP application across machines, Routing based on path in URL  OR Hostname/SubDomain or Query Param</li>
+  <li>Using Container : Load Balancing to multiple HTTP application on the same machine</li>
+  <li>Support for HTTP/2 and Web Socket</li>
+  <li>Support redirects, HTTP to HTTPS</li>
+  <li>ABS great for micro service and container-based application e.g. Docker & Amazone ECS</li>
+  <li>Application server doesn't see the IP of client directly so true IP of client is inserted into the header X-forwarded-For</li>
+  <li>We also get Port (X-Forwared-Port) and prototype (X-Forwared-Proto)`</li>
+</ul>
