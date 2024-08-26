@@ -216,4 +216,19 @@
   <li></li>
 </ul>
 
+<h3>Gateway Load Balancer</h3>
+<u>
+  <li>Gatewau Load Balancer is Layer 3 (IP Packets)</li>
+  <li>All the traffic route through Firewall, Intrusion Detection, Prevention System etc (3rd party Security Virtual Appliances).
+![image](https://github.com/user-attachments/assets/8d2293b0-e896-4b79-8d75-d8c9a521827d)
+    https://piyushj02.medium.com/aws-gateway-load-balancer-1o1-26d7cf61b798
+    https://aws.amazon.com/elasticloadbalancing/gateway-load-balancer/
+</li>
+  <li></li>
+</u>
+
+
+
+
+
 
