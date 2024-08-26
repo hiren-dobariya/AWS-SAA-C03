@@ -206,4 +206,14 @@
   <li>We also get Port (X-Forwared-Port) and prototype (X-Forwared-Proto)`</li>
 </ul>
 
+<h3>Network Load Balancer</h3>
+<ul>
+  <li>Network Load Balancer is Layer 4 allow to : </li>
+  <li>Forward TCP and UDP traffic to your instances</li>
+  <li>Handle millions of request per second</li>
+  <li>Less Letency 100ms compare to 400 ms in ALB</li>
+  <li>NLB has once static IP per AZ and supports Elastic IP Address</li>
+  <li></li>
+</ul>
+
 
