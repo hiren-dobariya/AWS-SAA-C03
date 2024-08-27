@@ -258,9 +258,22 @@
   <li>Webserver host many website. SNI indicates which hostname is attempting to connect to server at the start of the handshaking process.</li>
   <li>Why ? Shortage of IP4V. One IP associate with multiple host name so server doesn't know which host is requesting to start process.</li>
   <li>Only works for ALB, NLB and CloudFront, Not works with CLB</li>
-  <li></li>
 </ul>
 
-
-
+<h3>Auto Scaling Group - Scaling Policies</h3>
+<ul>
+  <li><strong>Dynamic Scaling</strong></li>
+   <li>Target Tracking Scaling:</li>
+  <li>Simple to set up</li>
+  <li>If you want to average ASG CPU to stay at around 50%</li>
+  <li>Simple / Step Scaling:</li>
+  <li>When a CloudWatch alarm is triggered e.g CPU > 70% then add 2 units</li>
+  <li>When a CloudWatch alarm is triggered e.g. CPU < 30% then remove 1 unit</li>
+  <li><strong>Schedule Scaling : </strong></li>
+    <li>Anticipate scaling based on known usage patterns</li>
+    <li>E.g. Increase a min capacity to 10 at 5 PM on Friday</li>
+  <li><strong>Predictive Scaling:</strong></li>
+    <li>Continues forcast load and schedule scaling ahead</li>
+    <li></li>
+</ul>
 
