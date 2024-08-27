@@ -278,3 +278,29 @@
     <li>During cool down period, ASG will not launch or terminate additional instances</li>
 </ul>
 
+<h3>RDA : Relational Database Services</h3>
+<ul>
+  <li>
+    AWS supported RDS : My SQL, Postgres, MariaDB, IBM DB2, Oracle, Aurora (Managed by AWS)
+  </li>
+  <li>Automated provisioning, OS patching</li>
+  <li>Coninues backup and restore to specific timestamp</li>
+  <li>Monitoring dashboard</li>
+  <li>Read replica for improve read performance</li>
+  <li>Multi AZ for disaster recovery</li>
+  <li>Maintenance windows for upgrades</li>
+  <li>Scaling capability, Vertical/Horizontal </li>
+  <li>Automic modify storage if:</li>
+  <li>Free storage is less than 10% of allocate storage</li>
+  <li>Low storage last at least 5 minutes</li>
+  <li>6 hours passed since last modification</li>
+</ul>
+
+<h3>RDS Read Replica</h3>
+<ul>
+  <li>Up to 15 read replica</li>
+  <li>Within AZ, cross AZ or region</li>
+  <li>Replication is ASYNC so reads are eventually consistent </li>
+  <li>Replica can be promoted to own Database</li>
+  <li>Application must update the connection string to leverage read replicas</li>
+</ul>
