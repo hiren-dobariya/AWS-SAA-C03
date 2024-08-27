@@ -274,6 +274,7 @@
     <li>E.g. Increase a min capacity to 10 at 5 PM on Friday</li>
   <li><strong>Predictive Scaling:</strong></li>
     <li>Continues forcast load and schedule scaling ahead</li>
-    <li></li>
+    <li>After scaling activity happens, you are in cooldown period. Default cooldown period is 300 seconds</li>
+    <li>During cool down period, ASG will not launch or terminate additional instances</li>
 </ul>
 
