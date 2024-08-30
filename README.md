@@ -304,3 +304,46 @@
   <li>Replica can be promoted to own Database</li>
   <li>Application must update the connection string to leverage read replicas</li>
 </ul>
+<h3>Amazon Aurora</h3>
+<ul>
+  <li>Auroa is proprietary technology from AWS</li>
+  <li>Postgres and MYSQL are both supported by Aurora as engine </li>
+  <li>Aurora as cloude optimize means its 5x faster than MYSQL and 3x faster than Postgres </li>
+  <li>Aurora storage automatically grow in increment of 10GB upto 128TB</li>
+  <li>Aurora can have 15 replicas and the replication is faster than MYSQL (sub 10ms replica lag)</li>
+  <li>Aurora cost more than RDA (20%)</li>
+</ul>
+
+<h3>Aurora High Available and Read Scalling</h3>
+<ul>
+  <li>6 copies of your data across the AZ</li>
+  <li>4 out of 6 needes for writes</li>
+  <li>3 out of 6 needed for reads</li>
+  <li>One Aurora instance take writes (Master)</li>
+  <li>Automated failover for master in less than 30 seconds</li>
+  <li>Master+ up to 15 Aurora read replicas to serve read, support cross region replication </li>
+</ul>
+<h3>RDS Database Port</h3>
+<ul>
+<li>PostgreSQL: 5432</li>
+<li>MySQL: 3306</li>
+<li>Oracle RDS: 1521</li>
+<li>MSSQL Server: 1433</li>
+<li>MariaDB: 3306 (same as MySQL)</li>
+<li>Aurora: 5432 (if PostgreSQL compatible)</li>
+<li>Aurora :3306 (if MySQL compatible) </li>
+</ul>
+
+<h3>DNS : Domain Name Server</h3>
+<ul>
+  <li>Domain Registrar: Amazon Route 53, GoDaddy etc.</li>
+  <li>DNS Record: A, AAAA, CNAME, NS ...</li>
+  <li>Zone File: Contains DNS records</li>
+  <li>Name Server: Resolve DNS queries(Authoritative or Non-Authoritative</li>
+  <li>Top Level Domain(TLD): .com, .us, .in, .gov, .org</li>
+  <li>Second Level Domain: amazon, google etc</li>
+  <li>Web Browser--> Local DNS Server(Managed by company or ISP) --> Root DNS Server (Managed by ICANN) --> Top Level Domain(TLD), Managed by IANA(Branch of ICANN, --> Second Level Domain (SLD), Managed by Domain Registrar </li>
+  <li>
+    ![image](https://github.com/user-attachments/assets/b4740481-6459-434f-905f-4151712dc0f9)
+  </li>
+</ul>
